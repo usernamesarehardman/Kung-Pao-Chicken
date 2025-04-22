@@ -1,0 +1,13 @@
+*.pcap__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pcap
+*.log
+.env
+venv/
+.env/
+.idea/
+.vscode/
+.DS_Store
+*.bak

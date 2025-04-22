@@ -1,0 +1,47 @@
+📄 Project Progress Report
+Course: CYBS 3743 – Network Forensics
+Project: Programming Project #1 – Pseudo-Wireshark
+Date: April 21, 2025
+Team Members: William Freeman, Conner Tunnell, Paul Nguyen, Alex Lee, Daren Diaz, Carlos Alvarez
+
+1. Project Overview
+The goal of our project is to create a simplified packet analyzer—essentially a pseudo-Wireshark—for educational use in network forensics. We chose to implement the project using Python, leveraging Scapy for packet capture and Flask for the graphical user interface. This setup allows us to build a lightweight, interactive web-based tool that can capture, save, filter, and display network packets.
+
+2. Development Progress
+Environment Setup:
+We set up our project environment using Python 3, Flask, and Scapy. A requirements.txt file was created for easy setup, along with .gitignore for good version control practices.
+
+Packet Capture:
+The Scapy library was used to implement live packet capture. We limited the number of captured packets to avoid performance issues during testing. Scapy's sniff() and wrpcap() functions were used to capture and save packets, while rdpcap() was used to read saved .pcap files.
+
+Filtering:
+As required, we implemented a basic filter that allows users to display only TCP or UDP packets using a dropdown on the web interface. The filter is applied after capture for simplicity.
+
+Web Interface (GUI):
+We used Flask to serve a clean, Bootstrap-styled web interface. The GUI allows users to start a capture session, view results in a table, and apply protocol filters. This satisfies the requirement of providing a user-friendly interface.
+
+Platform Compatibility:
+The tool runs on both Windows (with admin privileges) and Linux/macOS (via sudo). We provided both a run.sh script for Unix systems and a run.bat file for Windows.
+
+Project Structure:
+The project includes standard files like README.md, .gitignore, and all required Python scripts. It’s organized and documented so it can be shared or published easily.
+
+3. Challenges and Solutions
+Permission Issues:
+Capturing packets requires admin/root access. We addressed this by including setup instructions in the README and creating platform-specific run scripts.
+
+Scapy Performance:
+Capturing too many packets caused delays in the web interface. We added a cap on captured packets and will make this value configurable later if needed.
+
+Filtering at Capture vs Display:
+Initially, we planned to filter during capture but chose to filter after capture to keep the logic simpler and more flexible.
+
+4. Remaining Tasks
+Test with larger .pcap files and edge-case protocols
+
+Prepare for the demo on April 28 (screenshots, walkthrough)
+
+Optional: Add protocol breakdowns or packet details on click (stretch goal)
+
+5. Summary
+We are on track to complete the project by the deadline. The core functionality—packet capture, filter, save/load .pcap, and a working web GUI—is implemented and functioning. The remaining time will be used to polish the interface and prepare for the final demonstration.
