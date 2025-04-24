@@ -1,64 +1,56 @@
-# Project #2 - CYBS 3743
+# Pseudo-Wireshark
 
-## Due Date: Currently Unknown
+A simplified network packet analyzer built with Python, Scapy, and Flask, intended for educational purposes in network forensics. It captures live packets, allows filtering (e.g., TCP/UDP), and displays basic packet metadata through a web interface styled with Bootstrap.
 
-## Overview
+## Features
 
-This is an overview of the assignment.
+- Capture live network traffic
+- Save to and load from .pcap files
+- Filter by TCP or UDP
+- Web interface built with Flask and Bootstrap
+- Simple and lightweight
 
-## Objectives
+## Getting Started
 
-1. These
-2. are
-3. our
-4. objectives
+### Prerequisites
 
-## Repository Structure
+- Python 3.7+
+- Admin/root privileges (for packet capture)
 
-```
-📁 Kung-Pao-Chicken
-├── 📁 Folder                   # Folder
-│   └── script.sh               # Bash script
-└── 📄 README.md                # This document
-```
+### Installation
 
-## Implementation Details
+    git clone https://github.com/yourusername/pseudo-wireshark.git
+    cd pseudo-wireshark
+    pip install -r requirements.txt
 
-### `/Folder/`
-Directory which holds our script.
+### Run the App
 
-### `/script.sh`
-Our script, which displays a message to the terminal.
+    # On Unix/Linux/macOS (requires sudo for packet capture)
+    sudo python app.py
 
-## How to Run
+    # On Windows (run with admin privileges)
+    python app.py
 
-2. First, enter the `Folder` directory using:
-```bash
-cd Folder
-```
-3. Then, this is how to run the program:
-```bash
-./script.sh
-```
-Alternatively, one could try: `./script.sh`
+Then visit http://localhost:5000 in your browser.
 
-## Example Output
+## File Structure
 
-After running the script you should see this:
+    pseudo-wireshark/
+    ├── app.py                 # Flask app
+    ├── capture.py             # Scapy logic
+    ├── requirements.txt       # Python dependencies
+    ├── .gitignore             # Common ignored files
+    ├── templates/
+    │   └── index.html         # Main web page (Bootstrap)
+    └── static/
+        └── (Optional assets)
 
-```
-Hello world!
-```
+## Notes
 
-## Contributors
+- Only the first 20 packets are captured by default (modifiable in capture_packets()).
+- Scapy may trigger antivirus or firewall warnings.
+- For demo purposes, this app does not include HTTPS or authentication.
 
-- Alex L. 
-- William F.
-- Carlos A. 
-- Daren D.
-- Connor T.
-- Paul N.
+## License
 
-## References
-
-1. ChatGPT. (2025). *Content partially generated using OpenAI's ChatGPT-4o*. Retrieved from OpenAI API.
+MIT License
