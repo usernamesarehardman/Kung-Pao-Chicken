@@ -54,3 +54,15 @@ Then visit http://localhost:5000 in your browser.
 ## License
 
 MIT License
+
+## Contributers
+ - Alex L. 
+ - William F.
+ - Carlos A. 
+ - Daren D.
+ - Connor T.
+ - Paul N.
+   
+ ## References
+ 
+ 1. ChatGPT. (2025). *Content partially generated using OpenAI's ChatGPT-4o*. Retrieved from OpenAI API.
